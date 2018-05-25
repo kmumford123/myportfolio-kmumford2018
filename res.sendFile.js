@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 if (process.env.NODE_ENV === "production") {
     // Serve up static assets (usually on heroku)
-    app.use(express.static(__dirname + './public'))
+    app.use(express.static(__dirname + '/public'))
 }
 else {
     // Serve up static assets (usually on heroku)
