@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
 }
 else {
     // Serve up static assets (usually on heroku)
-    app.use(express.static('public'))
+    app.use(express.static('/public'))
 }
 
 app.use(bodyParser.urlencoded({ extended: true }));
