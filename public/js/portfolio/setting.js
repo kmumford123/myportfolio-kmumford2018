@@ -15,7 +15,7 @@ if (jQuery().quicksand) {
 		if (filterClass == 'all') {
 			var $filteredData = $data.find('.item-thumbs');
 		} else {
-			var $filteredData = $data.find('.item-thumbs[data-type=' + filterClass + ']');
+			var $filteredData = $data.find(`.item-thumbs[data-type=${filterClass}]`);
 		}
 		$(".portfolio").quicksand($filteredData, {
 			duration: 600,
@@ -27,7 +27,7 @@ if (jQuery().quicksand) {
 				padding : 0,
 				beforeShow: function () {
 					this.title = $(this.element).attr('title');
-					this.title = '<h4>' + this.title + '</h4>' + '<p>' + $(this.element).parent().find('img').attr('alt') + '</p>';
+					this.title = `<h4>${this.title}</h4><p>${this.element.parent().find('img').attr('alt')}</p>`;
 				},
 				helpers : {
 					title : { type: 'inside' },
